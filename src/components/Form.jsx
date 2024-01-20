@@ -52,7 +52,7 @@ export default function Form(){
             </div>
             
             { 
-                
+                //conditional rendering
                 meme.randomImage && (
                                         <div className="meme--container" >
                                             <img src={meme.randomImage} className="image--meme" />
