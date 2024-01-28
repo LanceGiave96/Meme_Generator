@@ -15,12 +15,13 @@ body
 
 .header-container
 {
-    width: 450px;
-    height: 65px;
+    width: 600px;
+    height: 100px;
     flex-shrink: 0;
     display: flex;
     flex-direction: row;
     position: relative;
+    align-items: center;
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 }
 
@@ -28,27 +29,24 @@ body
 {
     display: flex;
     flex-direction: row;
-    gap: 6px;
+    align-items: center;
+    gap: 18px;
     color: #FCFCFC;
-    position: absolute;
-    top: 20px;
-    bottom: 18.8px;
-    left: 29px;
-    right: 342px;
-    width: 170px;;
+    width: 400px;
+    margin: 0px auto;
 }
 
 .logo-img
 {
-    width: 31.306px;
-    height: 26.218px;
+    width: 50px;
+    height: 50px;
 }
 
 .logo-text
 {
     color: #FFF;
     font-family: Karla;
-    font-size: 20px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -56,37 +54,36 @@ body
     margin: 0px;
 }
 
-.form {
-
-    width: 450px;
+.form 
+{
+    width: 600px;
     display: grid;
     padding: 20px;
-    grid-template: 20px 40px 60px / 1fr 1fr;
-
+    grid-template: 40px 60px 80px / 1fr 1fr;
 }
 
 .form--label
 {
-
     margin-bottom: 5px;
     font-family: "Karla", sans-serif;
-
+    font-size: 25px;
 }
 
-.form--input {
-
+.form--input 
+{
     font-family: "Karla", sans-serif;
     border-radius: 5px;
     border: 1px solid #D5D4D8;
     text-indent: 5px;
-
+    font-size: 25px;
 }
 
-.form--button {
-
-    height: 40px;
+.form--button
+{
+    height: 100px;
     margin-top: 20px;
     grid-column: 1 / -1;
+    font-size: 30px;
     font-family: "Karla", sans-serif;
     border-radius: 5px;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
@@ -97,10 +94,11 @@ body
 
 .meme--container
 {
-    width: 450px;
-    height: 268px;
-    margin: 0px auto;
+    width: 500px;
+    height: 500px;
     position: relative;
+    top: 60px;
+    margin: 0px auto;
 }
 
 .image--meme

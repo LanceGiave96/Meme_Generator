@@ -69,7 +69,7 @@ export default function Form(){
                 <label className="form--label">Bottom text</label>
                 <input 
                     type="text"
-                    placeholder="Shut up"
+                    placeholder="Type top text..."
                     className="form--input"
                     name="topText"
                     value={meme.topText}
@@ -77,7 +77,7 @@ export default function Form(){
                 />
                 <input 
                     type="text"
-                    placeholder="And take my money"
+                    placeholder="Type bottom text..."
                     className="form--input"
                     name="bottomText"
                     value={meme.bottomText}
