@@ -102,8 +102,8 @@ export default function Form(){
             <div className="form">
                 <MemeText placeholder="First Text..." text="FirstText" handleText={handleText} />
                 <MemeText placeholder="Second Text..." text="SecondText" handleText={handleText} />
-                <MemeText placeholder="First Text..." text="ThirdText" handleText={handleText} />
-                <MemeText placeholder="First Text..." text="FourthText" handleText={handleText} />
+                <MemeText placeholder="Third Text..." text="ThirdText" handleText={handleText} />
+                <MemeText placeholder="Fourth Text..." text="FourthText" handleText={handleText} />
                 <button 
                     className="form--button"
                     onClick={getRandomMeme}
