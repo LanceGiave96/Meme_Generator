@@ -2,6 +2,7 @@ body
 {
     display: block;
     background-color: white;
+    user-select: none;
 }
 
 .main-container
@@ -130,10 +131,7 @@ body
     width: 200px;
     position: absolute;
     text-align: center;
-    /*
-    left: 50%;
-    transform: translateX(-50%);
-    */
+    cursor: move;
     margin: 0px;
     padding: 0 5px;
     font-family: impact, sans-serif;

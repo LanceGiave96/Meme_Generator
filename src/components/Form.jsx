@@ -1,5 +1,6 @@
 import React from "react"
 import MemeText from "./MemeText.jsx"
+import TextDrag from "./TextDrag.jsx"
 
 export default function Form(){
 
@@ -65,14 +66,44 @@ export default function Form(){
         )
     }
     
+    function handleDrag(event){
+       
+        event.preventDefault();
+        
+        // get the starting position of the cursor
+        let startPosX = event.clientX;
+        let startPosY = event.clientY;
+        
+        document.addEventListener('mousemove', mouseMove)
+        
+        document.addEventListener('mouseup', function(){
+            document.removeEventListener('mousemove', mouseMove)
+        })
+        
+        function mouseMove(e) {
+            // calculate the new position
+            let newPosX = startPosX - e.clientX;
+            let newPosY = startPosY - e.clientY;
+        
+            // with each move we also want to update the start X and Y
+            startPosX = e.clientX;
+            startPosY = e.clientY;
+        
+            // set the element's new position:
+            event.target.style.top = (event.target.offsetTop - newPosY) + "px";
+            event.target.style.left = (event.target.offsetLeft - newPosX) + "px";
+        }
+
+    }
+
     return(
 
         <main>
             <div className="form">
-                <MemeText placeholder="First Text..." text="FirstText" handleText={handleText}/>
-                <MemeText placeholder="Second Text..." text="SecondText" handleText={handleText}/>
-                <MemeText placeholder="First Text..." text="ThirdText" handleText={handleText}/>
-                <MemeText placeholder="First Text..." text="FourthText" handleText={handleText}/>
+                <MemeText placeholder="First Text..." text="FirstText" handleText={handleText} />
+                <MemeText placeholder="Second Text..." text="SecondText" handleText={handleText} />
+                <MemeText placeholder="First Text..." text="ThirdText" handleText={handleText} />
+                <MemeText placeholder="First Text..." text="FourthText" handleText={handleText} />
                 <button 
                     className="form--button"
                     onClick={getRandomMeme}
@@ -86,10 +117,10 @@ export default function Form(){
                 meme.randomImage && (
                                         <div className="meme--container" >
                                             <img src={meme.randomImage} className="image--meme" />
-                                            <h2 className="meme--text top-left">{meme.FirstText}</h2>
-                                            <h2 className="meme--text top-right">{meme.SecondText}</h2>
-                                            <h2 className="meme--text bottom-left">{meme.ThirdText}</h2>
-                                            <h2 className="meme--text bottom-right">{meme.FourthText}</h2>
+                                            <TextDrag class="meme--text top-left" text={meme.FirstText} handleDrag={handleDrag}/>
+                                            <TextDrag class="meme--text top-right" text={meme.SecondText} handleDrag={handleDrag}/>
+                                            <TextDrag class="meme--text bottom-left" text={meme.ThirdText} handleDrag={handleDrag}/>
+                                            <TextDrag class="meme--text bottom-right" text={meme.FourthText} handleDrag={handleDrag}/>
                                         </div>
                                     ) 
                 
