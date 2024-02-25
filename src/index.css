@@ -6,7 +6,7 @@ body
 
 .main-container
 {
-    margin: 80px auto 0px auto;
+    margin: 10px auto 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +59,15 @@ body
     width: 600px;
     display: grid;
     padding: 20px;
-    grid-template: 40px 60px 80px / 1fr 1fr;
+    grid-template: 60px 60px 80px / 1fr 1fr;
+}
+
+.div-text
+{
+    display: grid;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    grid-template: 60px / 1fr 1fr 1fr;
 }
 
 .form--label
@@ -72,10 +80,17 @@ body
 .form--input 
 {
     font-family: "Karla", sans-serif;
-    border-radius: 5px;
-    border: 1px solid #D5D4D8;
     text-indent: 5px;
     font-size: 25px;
+}
+
+.combo-input
+{
+    font-family: "Karla", sans-serif;
+    text-indent: 5px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
 }
 
 .form--button
@@ -111,12 +126,15 @@ body
 }
 
 .meme--text {
+    word-wrap: break-word;
+    width: 200px;
     position: absolute;
-    width: 80%;
     text-align: center;
+    /*
     left: 50%;
     transform: translateX(-50%);
-    margin: 15px 0;
+    */
+    margin: 0px;
     padding: 0 5px;
     font-family: impact, sans-serif;
     font-size: 1.5em;
@@ -135,10 +153,26 @@ body
         2px 2px 5px #000;
 }
 
-.bottom {
-    bottom: 0;
+.top-left 
+{
+    top: 0;
+    left: 0;
 }
 
-.top {
+.top-right 
+{
     top: 0;
+    right: 0;
+}
+
+.bottom-left 
+{
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right 
+{
+    bottom: 0;
+    right: 0;
 }

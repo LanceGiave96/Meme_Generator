@@ -1,4 +1,5 @@
 import React from "react"
+import MemeText from "./MemeText.jsx"
 
 export default function Form(){
 
@@ -28,8 +29,10 @@ export default function Form(){
 
     const [meme,setMeme] = React.useState(
         {
-            topText: "",
-            bottomText: "",
+            FirstText: "",
+            SecondText: "",
+            ThirdText: "",
+            FourthText: "",
             randomImage: ""
         }
     )
@@ -50,6 +53,7 @@ export default function Form(){
     
     function handleText(event){
         const {name,value} = event.target
+   
         setMeme( prevItem => (
 
                 {
@@ -65,24 +69,10 @@ export default function Form(){
 
         <main>
             <div className="form">
-                <label className="form--label">Top text</label>
-                <label className="form--label">Bottom text</label>
-                <input 
-                    type="text"
-                    placeholder="Type top text..."
-                    className="form--input"
-                    name="topText"
-                    value={meme.topText}
-                    onChange={handleText}
-                />
-                <input 
-                    type="text"
-                    placeholder="Type bottom text..."
-                    className="form--input"
-                    name="bottomText"
-                    value={meme.bottomText}
-                    onChange={handleText}
-                />
+                <MemeText placeholder="First Text..." text="FirstText" handleText={handleText}/>
+                <MemeText placeholder="Second Text..." text="SecondText" handleText={handleText}/>
+                <MemeText placeholder="First Text..." text="ThirdText" handleText={handleText}/>
+                <MemeText placeholder="First Text..." text="FourthText" handleText={handleText}/>
                 <button 
                     className="form--button"
                     onClick={getRandomMeme}
@@ -96,8 +86,10 @@ export default function Form(){
                 meme.randomImage && (
                                         <div className="meme--container" >
                                             <img src={meme.randomImage} className="image--meme" />
-                                            <h2 className="meme--text top">{meme.topText}</h2>
-                                            <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                                            <h2 className="meme--text top-left">{meme.FirstText}</h2>
+                                            <h2 className="meme--text top-right">{meme.SecondText}</h2>
+                                            <h2 className="meme--text bottom-left">{meme.ThirdText}</h2>
+                                            <h2 className="meme--text bottom-right">{meme.FourthText}</h2>
                                         </div>
                                     ) 
                 
