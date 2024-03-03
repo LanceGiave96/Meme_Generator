@@ -7,20 +7,20 @@ body
 
 .main-container
 {
-    margin: 10px auto 0px auto;
+    margin: 20px auto 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .header-container
 {
-    width: 800px;
-    height: 130px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: row;
+    min-width: 800px;
+    min-height: 100px;
     position: relative;
     align-items: center;
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
@@ -33,21 +33,21 @@ body
     align-items: center;
     gap: 20px;
     color: #FCFCFC;
-    width: 500px;
+    min-width: 500px;
     margin: 0px auto;
 }
 
 .logo-img
 {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
 
 .logo-text
 {
     color: #FFF;
     font-family: Karla;
-    font-size: 50px;
+    font-size: 70px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -57,10 +57,10 @@ body
 
 .form 
 {
-    width: 600px;
+    min-width: 800px;
     display: grid;
     padding: 20px;
-    grid-template: 60px 60px 80px / 1fr 1fr;
+    grid-template: 60px 60px / 1fr 1fr;
 }
 
 .div-text
@@ -75,31 +75,23 @@ body
 {
     margin-bottom: 5px;
     font-family: "Karla", sans-serif;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .form--input 
 {
     font-family: "Karla", sans-serif;
     text-indent: 5px;
-    font-size: 25px;
-}
-
-.combo-input
-{
-    font-family: "Karla", sans-serif;
-    text-indent: 5px;
-    font-size: 25px;
-    border-radius: 5px;
-    border: 1px solid #D5D4D8;
+    font-size: 35px;
 }
 
 .form--button
 {
-    height: 100px;
-    margin-top: 20px;
+    min-width: 800px;
+    min-height: 100px;
+    margin-top: 30px;
     grid-column: 1 / -1;
-    font-size: 30px;
+    font-size: 40px;
     font-family: "Karla", sans-serif;
     border-radius: 5px;
     background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
@@ -110,10 +102,9 @@ body
 
 .meme--container
 {
-    width: 500px;
-    height: 500px;
+    min-width: 500px;
+    min-height: 500px;
     position: relative;
-    top: 50px;
     margin: 0px auto;
 }
 
