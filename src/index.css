@@ -19,8 +19,8 @@ body
 {
     display: flex;
     flex-direction: row;
-    min-width: 900px;
-    min-height: 100px;
+    width: 900px;
+    height: 100px;
     position: relative;
     align-items: center;
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
@@ -57,7 +57,7 @@ body
 
 .form 
 {
-    min-width: 900px;
+    width: 900px;
     display: grid;
     padding: 20px;
     grid-template: 60px 60px / 1fr 1fr;
@@ -87,8 +87,8 @@ body
 
 .form--button
 {
-    min-width: 900px;
-    min-height: 100px;
+    width: 900px;
+    height: 100px;
     margin-top: 30px;
     grid-column: 1 / -1;
     font-size: 40px;
