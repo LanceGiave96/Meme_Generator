@@ -19,7 +19,7 @@ body
 {
     display: flex;
     flex-direction: row;
-    min-width: 800px;
+    min-width: 900px;
     min-height: 100px;
     position: relative;
     align-items: center;
@@ -57,7 +57,7 @@ body
 
 .form 
 {
-    min-width: 800px;
+    min-width: 900px;
     display: grid;
     padding: 20px;
     grid-template: 60px 60px / 1fr 1fr;
@@ -82,12 +82,12 @@ body
 {
     font-family: "Karla", sans-serif;
     text-indent: 5px;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .form--button
 {
-    min-width: 800px;
+    min-width: 900px;
     min-height: 100px;
     margin-top: 30px;
     grid-column: 1 / -1;
@@ -102,8 +102,7 @@ body
 
 .meme--container
 {
-    min-width: 500px;
-    min-height: 500px;
+    max-width: 900px;
     position: relative;
     margin: 0px auto;
 }
@@ -126,7 +125,7 @@ body
     margin: 0px;
     padding: 0 5px;
     font-family: impact, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.8em;
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
